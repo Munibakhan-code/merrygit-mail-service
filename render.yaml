@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: otp-mail-service
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn src.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: RABBITMQ_URL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: LOG_LEVEL
+        value: INFO
+      - key: APP_NAME
+        value: OTP Mail Service
+      - key: APP_VERSION
+        value: 1.0.0

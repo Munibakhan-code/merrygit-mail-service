@@ -1,0 +1,10 @@
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "0.115.6"
+uvicorn = {extras = ["standard"], version = "0.34.0"}
+pydantic = "2.10.1"
+pydantic-settings = "2.8.0"
+python-dotenv = "1.0.1"
+aio-pika = "9.4.1"
+resend = "2.19.0"
+email-validator = "2.2.0"
